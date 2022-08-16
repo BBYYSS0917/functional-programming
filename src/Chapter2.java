@@ -35,11 +35,17 @@ public class Chapter2 {
     // ***** Lambda表达式是一个匿名方法，将行为像数据一样进行传递
 
 
-
-
     public static void main(String[] args) {
-        Function<Long, Long> add5 = x -> x + 5L;
-        System.out.println(add5(10));
+        Function<Long, Long> func = x -> x + 5L;
+
+        Long num = func.apply(10L);
+
+        System.out.println(num);
+
+
+
+        //https://www.cnblogs.com/paidaxing7090/p/14055199.html
+//        ThreadLocal<Integer> threadLocal = ThreadLocal.withInitial();
 
     }
 
