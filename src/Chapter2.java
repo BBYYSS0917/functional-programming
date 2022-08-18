@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BinaryOperator;
@@ -34,6 +36,7 @@ public class Chapter2 {
 
     // ***** Lambda表达式是一个匿名方法，将行为像数据一样进行传递
 
+    public final static ThreadLocal<DateFormat> formatter = ThreadLocal.withInitial(() -> new SimpleDateFormat("dd-MMM-yyyy"));
 
     public static void main(String[] args) {
         Function<Long, Long> func = x -> x + 5L;
@@ -46,6 +49,8 @@ public class Chapter2 {
 
         //https://www.cnblogs.com/paidaxing7090/p/14055199.html
 //        ThreadLocal<Integer> threadLocal = ThreadLocal.withInitial();
+
+
 
     }
 
